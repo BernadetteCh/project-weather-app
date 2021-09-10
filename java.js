@@ -1,28 +1,33 @@
 //#Feature #1
+function formatDate(timestamp) {
+  let currentTime = new Date();
+  console.log(currentTime);
 
-let currentTime = new Date();
-console.log(currentTime);
+  let hour = currentTime.getHours();
+  console.log(hour);
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
 
-let hour = currentTime.getHours();
-console.log(hour);
+  let minutes = currentTime.getMinutes();
+  console.log(minutes);
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-let minutes = currentTime.getMinutes();
-console.log(minutes);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[currentTime.getDay()];
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[currentTime.getDay()];
-
-let h2 = document.querySelector("h2");
-h2.innerHTML = `${day} ${hour}:${minutes}`;
-
+  return `${day} ${hour}:${minutes}`;
+}
 //City Change Feature #2
 /*
 function searchCity(event) {
@@ -75,6 +80,8 @@ function displayWeatherCondition(response) {
   currentwind.innerHTML = response.data.wind.speed;
   let weatherdescription = document.querySelector(".description");
   weatherdescription.innerHTML = response.data.weather[0].description;
+  let date = document.querySelector("#date");
+  date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
