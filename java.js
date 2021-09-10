@@ -77,7 +77,7 @@ function displayWeatherCondition(response) {
   let currenthumidity = document.querySelector(".humidity");
   currenthumidity.innerHTML = response.data.main.humidity;
   let currentwind = document.querySelector(".wind");
-  currentwind.innerHTML = response.data.wind.speed;
+  currentwind.innerHTML = Math.round(response.data.wind.speed);
   let weatherdescription = document.querySelector(".description");
   weatherdescription.innerHTML = response.data.weather[0].description;
   let date = document.querySelector("#date");
