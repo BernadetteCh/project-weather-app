@@ -72,8 +72,11 @@ function displayWeatherCondition(response) {
   currentCity.innerHTML = response.data.name;
   console.log(currentCity);
   let currentTemp = document.querySelector(".degree");
-  currentTemp.innerHTML = Math.round(response.data.main.temp);
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
   console.log(currentTemp);
+
+  celsiusTemperature = response.data.main.temp;
+
   let currenthumidity = document.querySelector(".humidity");
   currenthumidity.innerHTML = response.data.main.humidity;
   let currentwind = document.querySelector(".wind");
@@ -102,9 +105,6 @@ function handleSubmit(event) {
   let city = document.querySelector("#input-city").value;
   searchCity(city);
 }
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-searchCity("New York");
 
 //Current Location
 
@@ -124,4 +124,22 @@ function showLocation(event) {
 
 let currentlocation = document.querySelector("button");
 currentlocation.addEventListener("click", showLocation);
-//Change into Fahrenheit
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+//Convert into Fahrenheit
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector(".degree");
+  let fahrenheitlink = (celsiusTemperature * 9) / 5 + 32;
+
+  currentTemp.innerHTML = Math.round(fahrenheitlink);
+}
+
+celsiusTemperature = null;
+
+let fahrenheitlink = document.querySelector("#fahrenheit-temperature");
+fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
+searchCity("New York");
