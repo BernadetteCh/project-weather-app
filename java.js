@@ -128,7 +128,7 @@ currentlocation.addEventListener("click", showLocation);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-//Convert into Fahrenheit
+//Convert into Fahrenheit & Celsius
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -138,8 +138,17 @@ function displayFahrenheitTemperature(event) {
   currentTemp.innerHTML = Math.round(fahrenheitlink);
 }
 
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  currentTemp = document.querySelector(".degree");
+  console.log(currentTemp);
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
+}
 celsiusTemperature = null;
-
 let fahrenheitlink = document.querySelector("#fahrenheit-temperature");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiuslink = document.querySelector("#celsius-temperature");
+celsiuslink.addEventListener("click", displayCelsiusTemperature);
+
 searchCity("New York");
