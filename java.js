@@ -95,7 +95,7 @@ searchForm.addEventListener("submit", handleSubmit);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  currentTemp = document.querySelector(".degree");
+  let currentTemp = document.querySelector(".degree");
 
   let fahrenheitlink = (celsiusTemperature * 9) / 5 + 32;
 
@@ -103,7 +103,8 @@ function displayFahrenheitTemperature(event) {
 }
 
 function displayCelsiusTemperature(event) {
-  currentTemp = document.querySelector(".degree");
+  event.preventDefault();
+  let currentTemp = document.querySelector(".degree");
   currentTemp.innerHTML = Math.round(celsiusTemperature);
 }
 
