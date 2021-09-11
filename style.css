@@ -129,8 +129,3 @@ li {
   height: 150px;
   letter-spacing: 5px;
 }
-
-#celsius-temperature,
-#fahrenheit-temperature {
-  color: black;
-}
