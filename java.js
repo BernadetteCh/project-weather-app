@@ -30,6 +30,7 @@ function formatDate(timestamp) {
 }
 
 function displayWeatherCondition(response) {
+  celsiusTemperature = response.data.main.temp;
   console.log(response);
   let currentTemp = document.querySelector(".degree");
   currentTemp.innerHTML = Math.round(celsiusTemperature);
@@ -52,8 +53,6 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
-
-  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
