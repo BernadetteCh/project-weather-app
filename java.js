@@ -95,14 +95,17 @@ searchForm.addEventListener("submit", handleSubmit);
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let currentTemp = document.querySelector(".degree");
+  celsiuslink.classList.remove("active");
+  fahrenheitlink.classList.add("active");
+  let fahrenheitElement = (celsiusTemperature * 9) / 5 + 32;
 
-  let fahrenheitlink = (celsiusTemperature * 9) / 5 + 32;
-
-  currentTemp.innerHTML = Math.round(fahrenheitlink);
+  currentTemp.innerHTML = Math.round(fahrenheitElement);
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+  celsiuslink.classList.add("active");
+  fahrenheitlink.classList.remove("active");
   let currentTemp = document.querySelector(".degree");
   currentTemp.innerHTML = Math.round(celsiusTemperature);
 }
