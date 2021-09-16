@@ -41,12 +41,11 @@
           <div id="celsius">
             <span class="degree">24</span>
             <span class="units">
-              <a
+              <a href="#" id="celsius-temperature" class="active">°C</a>|<a
                 href="#"
-                id="celsius-temperature"
-                class="active"
-                >°C</a
-              >|<a href="#" id="fahrenheit-temperature">°F</a>
+                id="fahrenheit-temperature"
+                >°F</a
+              >
             </span>
           </div>
         </section>
@@ -80,60 +79,24 @@
         </form>
       </main>
       <hr />
-      <!--forecast 1 day-->
-      <section class="weather_days">
+<!-----Forecast-->
+      <section class="weather_forecast">
         <div class="row">
           <div class="col-2">
             <div class="forecast">
-              <div class="forecast_first">
-                <div class="forecast_day">Fr</div>
-                <!--<div class="forecast_icon">🌤</div>-->
-                <img src="images/suncloud.png" />
-              </div>
+             <div class="forecast_first">
+                <div class="weather-forecast-date">Fr</div>
+                <img src="images/suncloud.png" alt="forecast-icon" class="forecast-icon" />
+                <div class="weather-forecast-temperature">18°</div>
+             </div>
             </div>
           </div>
-          <!--forecast 2 day-->
-          <div class="col-2">
-            <div class="forecast">
-              <div class="forecast_first">
-                <div class="forecast_day">Sa</div>
-                <!--<div class="forecast_icon">🌦</div>-->
-                <img src="images/lightningcloud.png" />
-              </div>
-            </div>
-          </div>
-          <!---forecast 3 day-->
-          <div class="col-2">
-            <div class="forecast">
-              <div class="forecast_first">
-                <div class="forecast_day">So</div>
-                <!--<div class="forecast_icon">🌩</div>-->
-                <img src="images/raincloud.png" />
-              </div>
-            </div>
-          </div>
-          <!--forecast 4 day-->
-          <div class="col-2">
-            <div class="forecast">
-              <div class="forecast_first">
-                <div class="forecast_day">Mo</div>
-                <!--<div class="forecast_icon">🌤</div>-->
-                <img src="images/bigcloud.png" />
-              </div>
-            </div>
-          </div>
-          <!--forecast 5 day-->
-          <div class="col-2">
-            <div class="forecast">
-              <div class="forecast_first">
-                <div class="forecast_day">Tue</div>
-                <!--<div class="forecast_icon">-->
-                <img src="images/suncloud.png" /><!--</div>-->
-              </div>
+          
             </div>
           </div>
         </div>
       </section>
+
     </div>
     <footer>
       <a href="https://github.com/BernadetteCh?tab=repositories" target="_blank"
