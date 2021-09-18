@@ -1,6 +1,6 @@
 //Timestamp
-function formatDate(timestamp) {
-  let currentTime = new Date(timestamp);
+function formatDate(time) {
+  let currentTime = new Date();
   console.log(currentTime);
 
   let hour = currentTime.getHours();
@@ -69,6 +69,9 @@ function handleSubmit(event) {
   let city = document.querySelector("#input-city").value;
   searchCity(city);
 }
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+searchCity("New York");
 
 //Current Location
 
@@ -88,39 +91,6 @@ function showLocation(event) {
 
 let currentlocation = document.querySelector("button");
 currentlocation.addEventListener("click", showLocation);
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-
-//Convert into Fahrenheit & Celsius
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector(".degree");
-  celsiuslink.classList.remove("active");
-  fahrenheitlink.classList.add("active");
-  let fahrenheitElement = (celsiusTemperature * 9) / 5 + 32;
-
-  currentTemp.innerHTML = Math.round(fahrenheitElement);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiuslink.classList.add("active");
-  fahrenheitlink.classList.remove("active");
-  let currentTemp = document.querySelector(".degree");
-  currentTemp.innerHTML = Math.round(celsiusTemperature);
-}
-
-celsiusTemperature = null;
-
-let fahrenheitlink = document.querySelector("#fahrenheit-temperature");
-fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiuslink = document.querySelector("#celsius-temperature");
-celsiuslink.addEventListener("click", displayCelsiusTemperature);
-
-searchCity("New York");
 
 //Forecast
 function displayForecast(response) {
@@ -169,7 +139,6 @@ function getForecast(coordinates) {
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
