@@ -155,6 +155,9 @@ a:hover {
 
   background-color: rgba(255, 255, 255, 0);
 }
+.forecast_first:hover {
+  margin-top: 10px;
+}
 .weather_days {
   margin-left: 50px;
 }
@@ -186,11 +189,13 @@ a:hover {
 }
 
 #celsius {
+  background-color: rgb(138, 35, 135, 0.05);
   color: black;
   font-size: 55px;
   border-radius: 50%;
-  border: 2px solid rgb(176, 47, 116, 0.6);
-  box-shadow: 0 0 8px 8px rgb(221, 61, 93, 0.9);
+  border: 2px solid rgba(161, 39, 114, 0.6);
+
+  box-shadow: 0 0 8px 8px rgb(176, 47, 116, 0.4);
 
   margin: 50px auto;
   max-width: 150px;
@@ -201,6 +206,7 @@ a:hover {
 }
 #celsius-temperature {
   color: black;
+
   text-decoration: none;
   font-size: 18px;
   cursor: default;
