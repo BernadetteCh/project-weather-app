@@ -1,16 +1,15 @@
 //Timestamp
 function formatDate(time) {
   let currentTime = new Date();
-  console.log(currentTime);
 
   let hour = currentTime.getHours();
-  console.log(hour);
+
   if (hour < 10) {
     hour = `0${hour}`;
   }
 
   let minutes = currentTime.getMinutes();
-  console.log(minutes);
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -29,15 +28,15 @@ function formatDate(time) {
   return `${day} ${hour}:${minutes}`;
 }
 
+//Weather Data
+
 function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
-  console.log(response);
   let currentTemp = document.querySelector(".degree");
   currentTemp.innerHTML = Math.round(celsiusTemperature);
-  console.log(currentTemp);
+
   let currentCity = document.querySelector("h1");
   currentCity.innerHTML = response.data.name;
-  console.log(currentCity);
 
   let currenthumidity = document.querySelector(".humidity");
   currenthumidity.innerHTML = response.data.main.humidity;
@@ -95,7 +94,7 @@ currentlocation.addEventListener("click", showLocation);
 //Forecast
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(forecast);
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -132,11 +131,10 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
   let unit = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${unit}`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 function formatDay(timestamp) {
