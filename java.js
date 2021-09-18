@@ -149,7 +149,7 @@ function displayForecast(response) {
                 />
                 <div class="weather-forecast-temperature">${Math.round(
                   forecastDay.temp.day
-                )}</div>
+                )}°</div>
               </div>
             </div>
           </div>
