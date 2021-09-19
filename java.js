@@ -143,3 +143,54 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   return days[day];
 }
+//City navigation
+function displayNewYork(event) {
+  event.preventDefault();
+  let unit = "metric";
+  let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
+  let city = "New York";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let NewYork = document.querySelector("#NewYork");
+NewYork.addEventListener("click", displayNewYork);
+
+function displayVienna(event) {
+  event.preventDefault();
+  let unit = "metric";
+  let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
+  let city = "Vienna";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let Vienna = document.querySelector("#Vienna");
+Vienna.addEventListener("click", displayVienna);
+
+function displayLondon(event) {
+  event.preventDefault();
+  let unit = "metric";
+  let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
+  let city = "London";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let London = document.querySelector("#London");
+London.addEventListener("click", displayLondon);
+
+function displayParis(event) {
+  event.preventDefault();
+  let unit = "metric";
+  let apiKey = "fb5a52a1b1d04da9188f79aaf5843917";
+  let city = "Paris";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let Paris = document.querySelector("#Paris");
+Paris.addEventListener("click", displayParis);
