@@ -95,13 +95,16 @@ li {
   margin-left: 225px;
   font-size: 14px;
 }
-footer,
-a {
+footer a {
   color: white;
 }
-footer,
-a:hover {
+footer a:hover {
   color: #c5b9b9;
+}
+
+.city_navigation a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.6);
 }
 
 .container {
@@ -189,13 +192,13 @@ a:hover {
 }
 
 #celsius {
-  background-color: rgb(138, 35, 135, 0.1);
+  /*background-color: rgb(138, 35, 135, 0.05);*/
   color: black;
   font-size: 55px;
   border-radius: 50%;
-  border: 2px solid rgba(161, 39, 114, 0.6);
+  border: 2px solid rgba(161, 39, 114, 0.5);
 
-  box-shadow: 0 0 8px 8px rgb(176, 47, 116, 0.3);
+  box-shadow: 0 0 8px 8px rgb(176, 47, 116, 0.2);
 
   margin: 50px auto;
   max-width: 150px;
