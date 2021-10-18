@@ -68,9 +68,6 @@ function handleSubmit(event) {
   let city = document.querySelector("#input-city").value;
   searchCity(city);
 }
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-searchCity("New York");
 
 //Current Location
 
@@ -87,9 +84,6 @@ function showLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
-let currentlocation = document.querySelector("button");
-currentlocation.addEventListener("click", showLocation);
 
 //Forecast
 function displayForecast(response) {
@@ -143,6 +137,7 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   return days[day];
 }
+
 //City navigation
 function displayNewYork(event) {
   event.preventDefault();
@@ -165,7 +160,6 @@ function displayVienna(event) {
 
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
 let Vienna = document.querySelector("#Vienna");
 Vienna.addEventListener("click", displayVienna);
 
@@ -194,3 +188,12 @@ function displayParis(event) {
 
 let Paris = document.querySelector("#Paris");
 Paris.addEventListener("click", displayParis);
+
+//Variablen
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+searchCity("New York");
+
+let currentlocation = document.querySelector("button");
+currentlocation.addEventListener("click", showLocation);
