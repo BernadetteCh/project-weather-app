@@ -1,84 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Roboto:ital,wght@0,100;0,300;1,100&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lato&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat+Alternates&family=Titan+One&display=swap");
+
+:root {
+  --heading-font-family: "Titan One", cursive;
+  --paragraph-font-family: "Cabin", sans-serif;
+  --subparagraph-font-family: "Montserrat Alternates", sans-serif;
+
+  --primary-color: #ffffff;
+  --secondary-color: #ecc4c4;
+  --third-color: #8d5d5d;
+}
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  min-height: 100vh;
-  background: rgb(138, 35, 135);
-  background: linear-gradient(
-    to right top,
-    rgba(138, 35, 135, 1) 17%,
-    rgba(233, 64, 87, 1) 70%,
-    rgb(242, 113, 33) 100%
-  );
+  background-image: url("images/world.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
 }
 
 h1 {
-  text-align: center;
-  letter-spacing: 3px;
+  font-family: var(--heading-font-family);
+  font-size: 50px;
+  color: var(--primary-color);
+}
+img {
+  width: 60px;
+  float: right;
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 0;
+  font-family: var(--paragraph-font-family);
   font-size: 20px;
-  letter-spacing: 3px;
+  color: var(--primary-color);
 }
 form {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-input[type="text"] {
-  border: 1px solid #c5b9b9;
-  color: black;
-  border-radius: 20px;
-  margin: 0 10px;
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-input[type="submit"] {
-  border: 1px solid #c5b9b9;
-  border-radius: 20px;
-  margin: 0 5px;
-  padding: 7px;
-  width: 90px;
-  background-color: rgba(255, 255, 255, 0.4);
-  transition: all 400ms ease-in-out;
-}
-
-input[type="submit"]:hover {
-  background-color: rgba(255, 255, 255, 0);
-  color: rgb(245, 240, 240);
-}
-button {
-  border: 1px solid #c5b9b9;
-  border-radius: 20px;
-  margin: 0 5px;
-  padding: 7px;
-  width: 90px;
-  background-color: rgba(255, 255, 255, 0.4);
-  transition: all 400ms ease-in-out;
-}
-
-button:hover {
-  background-color: rgba(255, 255, 255, 0);
-  color: rgb(245, 240, 240);
-}
-
-hr {
-  color: rgb(197, 186, 186);
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 50px;
-  padding: 1.3px;
-}
-
-img {
-  width: 70px;
-  display: block;
-  margin: 0 auto;
-}
 footer {
   text-align: center;
   font-weight: lighter;
@@ -92,8 +53,10 @@ li {
   text-align: justify;
   letter-spacing: 2px;
   margin-bottom: 0;
-  margin-left: 225px;
+  margin-left: 180px;
+  line-height: 22px;
   font-size: 14px;
+  font-family: var(--paragraph-font-family);
 }
 footer a {
   color: white;
@@ -102,31 +65,82 @@ footer a:hover {
   color: #c5b9b9;
 }
 
+input[type="text"] {
+  border: 1px solid white;
+  color: var(--primary-color);
+  font-family: var(--subparagraph-font-family);
+  border-radius: 15px;
+  margin: 0 10px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input[type="submit"] {
+  border: 1px solid var(--third-color);
+  border-radius: 15px;
+  margin: 0 5px;
+  padding: 7px;
+  width: 90px;
+
+  background-color: rgb(236, 196, 196, 0.8);
+  color: black;
+
+  transition: all 400ms ease-in-out;
+
+  font-family: var(--subparagraph-font-family);
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(141, 93, 93, 0.9);
+  color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+}
+button {
+  border: 1px solid var(--secondary-color);
+  border-radius: 15px;
+  margin: 0 5px;
+  padding: 7px;
+  background-color: rgb(141, 93, 93, 0.9);
+  color: var(--primary-color);
+  font-family: var(--subparagraph-font-family);
+
+  transition: all 400ms ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(236, 196, 196, 0.8);
+  color: black;
+  border: 1px solid var(--third-color);
+}
+
+.container_hero {
+  border: 1px solid grey;
+  height: auto;
+  border-radius: 20px;
+  background: linear-gradient(rgb(128, 128, 128, 0.8), rgb(41, 40, 40, 0.9));
+
+  box-shadow: 4px -6px 10px 2px rgba(221, 221, 221, 0.4);
+}
+
 .city_navigation a {
+  font-family: var(--paragraph-font-family);
   text-decoration: none;
-  color: rgb(0, 0, 0, 0.6);
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.city_navigation a:hover {
+  color: var(--primary-color);
 }
 
 .container {
-  max-width: 600px;
-  height: auto;
-  border: 1px solid grey;
-  border-radius: 40px;
-  margin: 20px auto;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.03)
-  );
-  border-color: #c5b9b9;
-  box-shadow: 4px 4px 10px rgba(201, 194, 194, 0.6);
+  margin: 80px auto;
+  width: 900px;
 }
 
 .city_navigation {
-  padding: 20px 20px;
-  margin: 8px;
+  text-align: center;
+  padding: 8px;
   font-size: 20px;
-  letter-spacing: 8px;
 }
 
 .humidity,
@@ -136,37 +150,18 @@ footer a:hover {
   letter-spacing: 2px;
 }
 .weather_data {
-  margin-top: 5px;
+  margin-top: 80px;
+  color: var(--primary-color);
 }
 
-.forecast {
-  border: 1px solid #c5b9b9;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  justify-content: center;
-  display: flex;
-
-  transition: all 600ms ease-in;
-}
-
-.forecast:hover {
-  width: 140px;
-  height: 140px;
-  color: rgb(245, 240, 240);
-
-  background-color: rgba(255, 255, 255, 0);
-}
-.forecast_first:hover {
-  margin-top: 10px;
-}
 .weather_days {
   margin-left: 50px;
 }
 .weather-forecast-date {
   font-size: 22px;
   text-align: center;
+  font-family: var(--paragraph-font-family);
+  color: var(--primary-color);
 }
 .forecast-icon {
   width: 45px;
@@ -174,43 +169,33 @@ footer a:hover {
 .weather-forecast-temperature {
   font-size: 19px;
   margin-left: 10px;
+  font-family: var(--paragraph-font-family);
+  color: var(--primary-color);
 }
 .weather_forecast {
-  margin-left: 50px;
-}
+  border: 1px solid grey;
+  padding: 10px;
+  margin-top: 100px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to top,
+    rgb(128, 128, 128, 0.6),
+    rgb(41, 40, 40, 0.9)
+  );
 
-.units {
-  font-size: 12px;
-  display: block;
-  text-align: center;
+  box-shadow: 4px 6px 10px 2px rgba(221, 221, 221, 0.4);
 }
 
 .degree {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
+  font-family: var(--paragraph-font-family);
+  font-size: 50px;
+  color: var(--primary-color);
 }
 
-#celsius {
-  /*background-color: rgb(138, 35, 135, 0.05);*/
-  color: black;
-  font-size: 55px;
-  border-radius: 50%;
-  border: 2px solid rgba(161, 39, 114, 0.5);
-
-  box-shadow: 0 0 8px 8px rgb(176, 47, 116, 0.2);
-
-  margin: 50px auto;
-  max-width: 150px;
-  height: 150px;
-  letter-spacing: 5px;
-  padding-bottom: 10px;
-  background: rgb(247, 224, 102, 0s);
-}
 #celsius-temperature {
-  color: black;
-
   text-decoration: none;
-  font-size: 18px;
-  cursor: default;
+  font-family: var(--paragraph-font-family);
+  font-size: 20px;
+  vertical-align: top;
+  color: var(--primary-color);
 }

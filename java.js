@@ -97,7 +97,7 @@ function displayForecast(response) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2">
+        `<div class="col d-flex justify-content-center">
             <div class="forecast">
               <div class="forecast_first">
                 <div class="weather-forecast-date">${formatDay(
