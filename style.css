@@ -257,6 +257,9 @@ footer p a {
   .weather-forecast-date {
     font-size: 18px;
   }
+  .forecast-icon{
+    width: 30px;
+  }
   #celsius {
     text-align: center;
   }
