@@ -18,69 +18,74 @@
   </head>
   <body>
     <div class="container">
-      <!--head-navigation-->
-      <header>
-        <div class="row">
-          <div class="col-3">
-            <div class="city_navigation">
-              <a href="#" id="NewYork">NewYork</a>
+      <div class="container_hero">
+        <!--head-navigation-->
+        <header>
+          <div class="row">
+            <div class="col-3">
+              <div class="city_navigation">
+                <a href="#" id="NewYork">NewYork</a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="city_navigation">
+                <a href="#" id="Vienna">Vienna</a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="city_navigation">
+                <a href="#" id="London">London</a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="city_navigation">
+                <a href="#" id="Paris">Paris</a>
+              </div>
             </div>
           </div>
-          <div class="col-3">
-            <div class="city_navigation">
-              <a href="#" id="Vienna">Vienna</a>
+        </header>
+        <!--main-->
+        <main>
+          <div class="row justify-content-evenly mt-5">
+            <div class="col-4 ms-5">
+              <section class="temperature">
+                <div id="celsius">
+                  <span class="degree">24</span>
+                  <span class="units">
+                    <a href="#" id="celsius-temperature" class="active">°C</a>
+                  </span>
+                </div>
+              </section>
+
+              <img src="" id="icon" alt="weather-icon" />
+
+              <h1></h1>
+
+              <h2 id="date"></h2>
+            </div>
+            <div class="col-6">
+              <section class="weather_data">
+                <li>Description: <span class="description"></span></li>
+                <li>
+                  Humidity:
+                  <span class="humidity"></span>%
+                </li>
+                <li>Wind: <span class="wind"></span>km/h</li>
+              </section>
             </div>
           </div>
-          <div class="col-3">
-            <div class="city_navigation">
-              <a href="#" id="London">London</a>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="city_navigation"><a href="#" id="Paris">Paris</a></div>
-          </div>
-        </div>
-      </header>
-      <!--main-->
-      <main>
-        <section class="temperature">
-          <div id="celsius">
-            <span class="degree">24</span>
-            <span class="units">
-              <a href="#" id="celsius-temperature" class="active">°C</a>
-            </span>
-          </div>
-        </section>
-        <div class="row justify-content-md-center">
-          <!--Weather icon -->
-          <div class="col-md-auto">
-            <h1></h1>
-          </div>
-          <div class="col col-lg-1">
-            <img src="" id="icon" alt="weather-icon" />
-          </div>
-        </div>
-        <h2 id="date"></h2>
-        <section class="weather_data">
-          <li><span class="description"></span></li>
-          <li>
-            Humidity:
-            <span class="humidity"></span>%
-          </li>
-          <li>Wind: <span class="wind"></span>km/h</li>
-        </section>
-        <form id="search-form">
-          <input
-            id="input-city"
-            type="text"
-            placeholder="Enter City"
-            autocomplete="off"
-          />
-          <input id="input-submit" type="submit" value="Search" />
-          <button>current</button>
-        </form>
-      </main>
-      <hr />
+          <form id="search-form">
+            <input
+              id="input-city"
+              type="text"
+              placeholder="Enter City"
+              autocomplete="off"
+            />
+            <input id="input-submit" type="submit" value="Search" />
+            <button>Current Location</button>
+          </form>
+        </main>
+      </div>
       <!-----Forecast-->
       <section class="weather_forecast" id="forecast"></section>
     </div>
