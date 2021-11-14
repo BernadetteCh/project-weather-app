@@ -112,9 +112,11 @@ button:hover {
   color: black;
   border: 1px solid var(--third-color);
 }
-
+footer p a {
+  font-size: 10px;
+  text-decoration: none;
+}
 .container_hero {
-  border: 1px solid grey;
   height: auto;
   border-radius: 20px;
   background: linear-gradient(rgb(128, 128, 128, 0.8), rgb(41, 40, 40, 0.9));
@@ -173,7 +175,6 @@ button:hover {
   color: var(--primary-color);
 }
 .weather_forecast {
-  border: 1px solid grey;
   padding: 10px;
   margin-top: 100px;
   border-radius: 20px;
@@ -198,4 +199,68 @@ button:hover {
   font-size: 20px;
   vertical-align: top;
   color: var(--primary-color);
+}
+#search-form {
+  padding-bottom: 10px;
+}
+@media (max-width: 600px) {
+  li {
+    margin: 0px;
+    text-align: center;
+    font-size: 13px;
+    line-height: normal;
+  }
+  img {
+    float: none;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  input[type="text"] {
+    margin: 0px;
+    padding: 2px;
+    width: 150px;
+  }
+  input[type="submit"] {
+    padding: 3px;
+    margin: 0px;
+    font-size: 15px;
+  }
+  button {
+    display: none;
+  }
+
+  .container {
+    width: 350px;
+    margin-top: 20px;
+  }
+  .container_hero {
+    background: linear-gradient(rgb(128, 128, 128, 0.4), rgb(41, 40, 40, 0.9));
+  }
+  .weather_data {
+    margin-top: 20px;
+  }
+  .weather_forecast {
+    box-shadow: none;
+  }
+  .forecast {
+    width: 350px;
+  }
+  .forecast_first {
+    display: flex;
+    justify-content: space-between;
+  }
+  .weather-forecast-date {
+    font-size: 18px;
+  }
+  #celsius {
+    text-align: center;
+  }
+  #search-form {
+    padding-bottom: 20px;
+  }
 }
