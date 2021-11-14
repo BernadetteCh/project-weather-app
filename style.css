@@ -253,12 +253,14 @@ footer p a {
   .forecast_first {
     display: flex;
     justify-content: space-between;
+    padding: 0px;
   }
   .weather-forecast-date {
     font-size: 18px;
   }
-  .forecast-icon{
+  .forecast-icon {
     width: 30px;
+    height: 30px;
   }
   #celsius {
     text-align: center;
