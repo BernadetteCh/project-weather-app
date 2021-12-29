@@ -204,7 +204,8 @@ footer p a {
   padding-bottom: 10px;
 }
 @media (max-width: 600px) {
-  li {
+ 
+li {
     margin: 0px;
     text-align: center;
     font-size: 13px;
@@ -216,9 +217,11 @@ footer p a {
   h1 {
     display: flex;
     justify-content: center;
+    text-align: center;
   }
   h2 {
     font-size: 16px;
+    text-align: center;
   }
   input[type="text"] {
     margin: 0px;
@@ -233,7 +236,6 @@ footer p a {
   button {
     display: none;
   }
-
   .container {
     width: 350px;
     margin-top: 20px;
@@ -247,9 +249,9 @@ footer p a {
   .weather_forecast {
     box-shadow: none;
   }
-  .forecast {
-    width: 350px;
-  }
+.forecast{
+  width: 350px;
+}
   .forecast_first {
     display: flex;
     justify-content: space-between;
